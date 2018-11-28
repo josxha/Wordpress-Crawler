@@ -16,8 +16,9 @@ $crawler = new Crawler($_GET['url']);
 $result['images'] = $crawler->get_media_urls("image");
 $result['videos'] = $crawler->get_media_urls("video");
 $result['audios'] = $crawler->get_media_urls("audio");
-$result['files'] = $crawler->get_media_urls("application");
+$result['others'] = $crawler->get_media_urls("application");
 
+$result['users'] = $crawler->get_users();
 
 header('Content-Type: application/json');
 echo json_encode($result);

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <title>WordPress Crawler</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic">
@@ -18,7 +18,7 @@
     <div class="container my-auto text-center">
         <h1 class="mb-1">WordPress Crawler</h1>
         <h3 class="mb-5"><em>Get media and user information of any WordPress Page!</em></h3>
-        <div class="alert alert-danger text-monospace <?php if (isset($_GET['error'])) echo "d-none"; ?>" role="alert">
+        <div class="alert alert-danger text-monospace <?php if (!isset($_GET['error'])) echo "d-none"; ?>" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                         aria-hidden="true">×</span></button>
             <h4 class="alert-heading">An error has occured</h4><span><strong>Please enter a valid URL of the root of the WordPress installation.</strong></span>
